@@ -26,6 +26,8 @@ class LinksViewController: UIViewController {
         }
     
     override func viewDidLoad() {
+        
+        //method to display the links we have for each category
         if allLinks.0 == "Home" {
             let attributedString = NSMutableAttributedString(string: "9 Ways to be more sustainable at home")
             attributedString.addAttribute(.link, value: allLinks.1, range: NSRange(location: 0, length: 37))
