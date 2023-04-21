@@ -17,6 +17,7 @@ class RecyclingCentreViewController: UIViewController, UITableViewDelegate, UITa
     var rec_centres: rCentres? = nil
     
     var centre: String = ""
+    //the arrays for the centres and their address
     var centre_names = ["Gaskells Waste Services","Recycling Lives", "Old Swan Household Waste Recycling Centre", "South Sefton Recycling Centre", "West Kirby Recycling Centre","Bidston Recycling Centre"]
     var cities = ["Liverpool, L1 0AR", "Liverpool, L10 5HA", "Liverpool, L18 5EA", "Bootle, L20 4AE", "West Kirby, CH48 5HH", "Birkenhead, CH41 1EB"]
     
@@ -26,6 +27,8 @@ class RecyclingCentreViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        //displaying the information in the tabel
     
         let aCell = tableView.dequeueReusableCell(withIdentifier:  "myCell", for: indexPath)
       
@@ -41,12 +44,14 @@ class RecyclingCentreViewController: UIViewController, UITableViewDelegate, UITa
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //segue to go to more detail
         centre = centre_names[indexPath.row]
         performSegue(withIdentifier: "toDetail", sender: nil)
     }
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?){
+        //passing the selected value from cell to the detail view controller
         if(segue.identifier == "toDetail"){
             
             let dvc = segue.destination as! DetailViewController
@@ -111,7 +116,7 @@ class RecyclingCentreViewController: UIViewController, UITableViewDelegate, UITa
     
     */
     func setInitialMap(){
-        
+        //setting the user location
         let title = "User - Liverpool One"
         let lat = 53.403
         let lon = -2.985
@@ -126,6 +131,8 @@ class RecyclingCentreViewController: UIViewController, UITableViewDelegate, UITa
         annotation.title = title
         self.myMap.addAnnotation(annotation)
     }
+    
+    //placing annotations on the map for each recycling centre
     
     func setC1(){
         
