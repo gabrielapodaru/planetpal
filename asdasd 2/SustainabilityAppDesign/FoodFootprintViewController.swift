@@ -28,8 +28,11 @@ class FoodFootprintViewController: UIViewController, UIPickerViewDataSource, UIP
     @IBAction func goBack(_ sender: Any) {
     }
         
+    //array and dictionary for the data
     let foodOptions = ["Beef (beef herd)", "Lamb", "Cheese", "Beef (dairy herd)", "Chocolate", "Coffee", "Prawns", "Palm Oil", "Pig Meat", "Poultry Meat", "Olive Oil", "Fish (farmed)", "Eggs", "Rice", "Fish (wild catch)", "Milk", "Cane Sugar", "Groundnuts", "Wheat & Rye", "Tomatoes", "Maize", "Cassava", "Soymilk", "Peas", "Bananas", "Root Vegetables", "Apples", "Citrus Fruit", "Nuts","Prawn Mayo", "BLT", "Ham & Cheese", "Chicken & Bacon", "Ham", "All Day Breakfast", "Cheese & Onion","Egg & Bacon", "Egg", "Chicken Club", "Tuna Mayo", "Southern Fried Chicken", "Chicken Bacon & Stuffing", "BBQ Chicken Bacon & Cheese","Chicken & Avocado"]
     
+    //the meal deal co2e was calculated assuming that the customer would purchase a pack of crisps and a drink
+    //the data was take from https://www.greenenergyuk.com/blog/news/environmental-impact-of-your-meal-deal
     let footprint = [0: "60kg of CO2e/kg of food equivalent of 240 miles",
                      1: "24kg of CO2e/kg of food equivalent of 96 miles",
                      2: "21kg of CO2e/kg of food equivalent of 84 miles",
@@ -89,6 +92,7 @@ class FoodFootprintViewController: UIViewController, UIPickerViewDataSource, UIP
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) ->Int {
+        //return as many options in the picker as food options
         return foodOptions.count
     }
     
@@ -97,7 +101,7 @@ class FoodFootprintViewController: UIViewController, UIPickerViewDataSource, UIP
     }
  
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent  component: Int) {
-       
+       //show the co2e for the selected value
         if let selectedFood = footprint[row]{
             displayFootprint.text = selectedFood
         }
