@@ -1,0 +1,49 @@
+//
+//  centres.json
+//  SustainabilityAppDesign
+//
+//  Created by Podaru, Maria-Gabriela on 20/04/2023.
+//
+
+import Foundation
+{
+    "recyclingCentres": [
+        {
+            "name": "Gaskells Waste Services",
+            "address": "Bridgewater Street, Liverpool L1 0AR, United Kingdom",
+            "latitude": 53.402693,
+            "longitude": -2.977062
+            
+        },
+        {   "name": "Recycling Lives",
+            "address": "Gillmoss Recycling Park, Bridgehouse Lane, Liverpool L10 5HA, United Kingdom",
+            "latitude": 53.463234,
+            "longitude": -2.923256
+            
+        },
+        {   "name": "Mossley Hill Recycling Centre",
+            "address": "Rose Lane, Liverpool L18 5EA, United Kingdom",
+            "latitude": 53.376368,
+            "longitude": -2.927187
+            
+        },
+        {   "name": "South Sefton Recycling Centre",
+            "address": "Irlam Road, Bootle L20 4AE, United Kingdom",
+            "latitude": 53.465126,
+            "longitude": -2.997913
+            
+        },
+        {   "name": "West Kirby Recycling Centre",
+            "address": "Greenbank Road, West Kirby, Wirral CH48 5HH, United Kingdom",
+            "latitude": 53.372963,
+            "longitude": -3.188172
+            
+        },
+        {   "name": "Bidston Recycling Centre",
+            "address": "Wallasey Bridge Road, Birkenhead, Wirral CH41 1EB, United Kingdom",
+            "latitude": 53.402279,
+            "longitude": -3.019039
+        }
+    ]
+}
+
