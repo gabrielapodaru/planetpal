@@ -9,6 +9,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    //button to go back
     @IBAction func goBack(_ sender: Any) {
     }
     
@@ -18,6 +19,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var reviewsLabel: UILabel!
     var selectedCentre: String = ""
     
+    //arrays to store all our data
     var centre_names = ["Gaskells Waste Services","Recycling Lives", "Old Swan Household Waste Recycling Centre", "South Sefton Recycling Centre", "West Kirby Recycling Centre","Bidston Recycling Centre"]
     var cities = ["Bridgewater Street, Liverpool L1 0AR, United Kingdom", "Gillmoss Recycling Park, Bridgehouse Lane, Liverpool L10 5HA, United Kingdom", "Cheadle Avenue, Liverpool L13 3AF, United Kingdom", "Irlam Road, Bootle L20 4AE, United Kingdom", "Greenbank Road, West Kirby, Wirral CH48 5HH, United Kingdom", "Wallasey Bridge Road, Birkenhead, Wirral CH41 1EB, United Kingdom"]
     var times = ["Monday-Friday: 8.30am - 5.30pm, Saturday: 8.30 - 2pm, Sunday: closed", "Monday-Thursday: 8am - 5pm, Froday: 8am - 4:30pm, Saturday: 8am - 12pm, Sunday: Closed", "Monday-Sunday: 8am-8pm", "Monday-Sunday: 8am-8pm", "Monday-Sunday: 8am-8pm", "Monday-Sunday: 8am-8pm"]
@@ -25,7 +27,7 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //based on the cell that was chosen display the according details
         if (selectedCentre == centre_names[0]) {
             nameLabel.text = centre_names[0]
             addressLabel.text = cities[0]
